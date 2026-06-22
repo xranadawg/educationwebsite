@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xranadawg.github.io/educationwebsite/sitemap.xml
