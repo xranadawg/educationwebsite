@@ -3,88 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>Jaxon Gallagher | Essays, Analysis, & Research</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background: #f5f5f5;
+            font-family: Georgia, serif;
+            line-height: 1.7;
+            background-color: #f8f8f8;
             color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
         }
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            padding: 4rem 0;
+            border-bottom: 1px solid #ddd;
         }
 
-        h1 {
-            margin-bottom: 5px;
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: .5rem;
         }
 
-        .subtitle {
+        header p {
             color: #666;
+            max-width: 700px;
+            margin: auto;
         }
 
-        article {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+        nav {
+            margin-top: 2rem;
         }
 
-        .date {
-            color: #777;
-            font-size: 0.9rem;
-        }
-
-        a {
-            color: #0066cc;
+        nav a {
             text-decoration: none;
+            color: #444;
+            margin: 0 12px;
+            font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            color: black;
+        }
+
+        section {
+            margin: 4rem 0;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: .5rem;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            margin-bottom: .75rem;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .article-list {
+            list-style: none;
+        }
+
+        .article-list li {
+            background: white;
+            margin-bottom: .75rem;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .category {
+            background: white;
+            border: 1px solid #ccc;
+            padding: .6rem 1rem;
+            border-radius: 20px;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
             color: #666;
+            border-top: 1px solid #ddd;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
         }
     </style>
 </head>
 <body>
 
+<div class="container">
+
     <header>
-        <h1>My Blog</h1>
-        <p class="subtitle">Thoughts, ideas, and things I'm learning.</p>
+        <h1>Jaxon Gallagher</h1>
+        <p>
+            Essays, opinion pieces, research breakdowns, and educational articles
+            covering psychology, neuroscience, technology, society, and the ideas
+            shaping our world.
+        </p>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Opinion</a>
+            <a href="#">Psychology</a>
+            <a href="#">Technology</a>
+            <a href="#">Research</a>
+            <a href="#">About</a>
+        </nav>
     </header>
 
-    <article>
-        <h2><a href="#">First Post</a></h2>
-        <p class="date">June 22, 2026</p>
-        <p>
-            Welcome to my blog. This is where I'll share things I'm learning,
-            projects I'm working on, and topics I find interesting.
-        </p>
-    </article>
+    <section>
+        <h2>Featured Articles</h2>
 
-    <article>
-        <h2><a href="#">Another Post</a></h2>
-        <p class="date">June 20, 2026</p>
+        <div class="featured-grid">
+
+            <div class="card">
+                <h3>Is Social Media Actually Bad for Gen Z?</h3>
+                <p>
+                    Looking beyond headlines and exploring what the research
+                    says about social media, mental health, and connection.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Understanding Confirmation Bias</h3>
+                <p>
+                    Why intelligent people can reach wildly different conclusions
+                    from the same evidence.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>How Artificial Intelligence Changes Learning</h3>
+                <p>
+                    Exploring how AI tools are transforming education,
+                    research, and critical thinking.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Latest Articles</h2>
+
+        <ul class="article-list">
+            <li>The Psychology of First Impressions</li>
+            <li>Why People Believe Misinformation</li>
+            <li>What Makes a Good Scientific Study?</li>
+            <li>The Future of Human-AI Collaboration</li>
+            <li>Can We Trust Our Own Memories?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Topics</h2>
+
+        <div class="categories">
+            <div class="category">Psychology</div>
+            <div class="category">Neuroscience</div>
+            <div class="category">Technology</div>
+            <div class="category">Artificial Intelligence</div>
+            <div class="category">Research</div>
+            <div class="category">Education</div>
+            <div class="category">Society</div>
+            <div class="category">Opinion</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>About This Site</h2>
+
         <p>
-            This is a placeholder article. Replace this text with your own
-            content when you're ready to start publishing.
+            This website is dedicated to making complex ideas accessible.
+            Articles range from evidence-based psychology and neuroscience
+            explainers to opinion pieces on technology, education, and culture.
+            The goal is simple: explore interesting questions and communicate
+            what the evidence says in a clear, engaging way.
         </p>
-    </article>
+    </section>
 
     <footer>
-        <p>&copy; 2026 My Blog</p>
+        <p>© 2026 Jaxon Gallagher</p>
     </footer>
+
+</div>
 
 </body>
 </html>
