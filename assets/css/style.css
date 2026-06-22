@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Georgia, serif;
+max-width: 900px;
+margin: auto;
+padding: 20px;
+line-height: 1.8;
+color: #222;
+}
+
+header {
+margin-bottom: 50px;
+text-align: center;
+}
+
+h1 {
+margin-bottom: 10px;
+}
+
+nav a {
+margin: 0 10px;
+text-decoration: none;
+}
+
+.card {
+border: 1px solid #ddd;
+padding: 20px;
+margin-bottom: 20px;
+}
+
+article {
+margin-bottom: 40px;
+}
+
+.meta {
+color: #666;
+font-size: 0.9rem;
+}
+
+footer {
+margin-top: 60px;
+text-align: center;
+color: #666;
+}
